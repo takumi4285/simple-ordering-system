@@ -1,0 +1,138 @@
+//  li{
+//     float:left;
+//     list-style:none;
+//     margin: 0 20px;
+//   }
+
+// * {
+//       margin: 0;
+//       padding: 0;
+//     }
+    
+
+// #list ul li {
+//       display: block;
+//       float: left;
+//       height: 10px;
+//       list-style-type: none;
+//       text-align: center;
+// }
+
+// #list ul li {
+//     width: 10%;
+//   }
+    
+
+  div.title button {
+    float: right;
+  }
+  
+  .table-wrap{
+    clear: both;
+    display: block;}
+
+table {
+    // clear: both;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  
+  thead, tbody {
+    display: block;
+    width: 100%;
+  }
+  tbody{
+    overflow: scroll;
+    height: 300px;
+  }
+  
+  th, td {
+    width: 120px;
+    // width: auto;
+  }
+  
+  th {
+    position: sticky;
+    top: 0;
+    border: solid 1px black;
+    background-color: #e0e0e0;
+    box-shadow: 0px -20px 20px 0px rgba(0, 0, 0, 0.20) inset;
+  }
+  
+  td {
+    border: solid 1px black;
+    background-color: white;
+  }
+  
+  div.leftside {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    position: relative;
+    left: 20%;
+  }
+  
+  div.rightside {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    position: relative;
+    left: 20%;
+  }
+  
+  
+  label {
+    margin: 5px;
+  }
+  
+  span {
+    margin: auto 0;
+    width: 100px;
+    float: left;
+    clear: both;
+  }
+  
+  input {
+    padding: 5px;
+  }
+  
+  select {
+    width: auto;
+    padding: 5px;
+  }
+  
+  .button {
+    margin: 10px;
+    padding: 10px;
+    clear: both;
+    text-align: center;
+  }
+  
+  button {
+    position: relative;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: solid .5px black;
+    border-radius: 5px;
+    box-shadow: 0px -20px 20px 0px rgba(0, 0, 0, 0.20) inset;
+  }
+  
+  button.excel {
+    width: 120px;
+  }
+  
+  img.icon-button {
+    position: absolute;
+    top: 30%;
+    left: 10px;
+  }
+  
+  tr:hover td {
+    background-color: seashell;
+  }
+  
+  tr.active td {
+    background-color: seashell;
+  }

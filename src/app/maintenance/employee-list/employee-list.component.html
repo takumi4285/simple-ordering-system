@@ -1,0 +1,106 @@
+<div class="title">
+    <h2>
+        <img class="icon" src="../../../assets/icon/icon-folder-close.png">
+        社員表メンテナンス
+      </h2>
+      <button class="excel" type="button" (click)='exportExcel()'>
+        <img class="icon-button" src="../../../assets/icon/icon-download-alt.png">
+        Excel作成
+       </button>
+</div>
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>社員番号</th>
+                <th>社員名</th>
+                <th>ふりがな</th>
+                <th>職務</th>
+                <th>上司番号</th>
+                <th>入社日</th>
+                <th>給料</th>
+                <th>歩合給</th>
+                <th>部門番号</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- <td>{{ employee.empno }}</td>
+                <td>{{ employee.ename }}</td>
+                <td>{{ employee.yomi }}</td>
+                <td>{{ employee.job }}</td>
+                <td>{{ employee.mgr }}</td>
+                <td>{{ employee.hiredate | date : 'yyyy/MM/dd' }}</td>
+                <td>{{ employee.sal | currency : 'JPY' }}</td>
+                <td>{{ employee.comm | currency : 'JPY' }}</td>
+                <td>{{ employee.deptno }}</td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<form class="input-aria"  >
+    <div class="leftside">
+      <label for="empno">
+        <span class="column-name">社員番号* </span>
+        <input ngModel name="empno" type="number" id="empno" required maxlength="4" placeholder="4桁まで入力できます。">
+      </label>
+      <label for="ename">
+        <span class="column-name">社員名 </span>
+        <input ngModel name="ename" type="text" id="ename" maxlength="10" placeholder="10文字まで入力できます。">
+      </label>
+      <label for="yomi">
+        <span class="column-name">よみがな </span>
+        <input ngModel name="yomi" type="text" id="yomi" maxlength="20" placeholder="20文字まで入力できます。">
+      </label>
+      <label for="job">
+        <span class="column-name">職務 </span>
+        <input ngModel name="job" type="text" id="job" maxlength="8" placeholder="8文字まで入力できます。">
+      </label>
+      <label for="mgr">
+        <span class="column-name">上司番号 </span>
+        <select ngModel name="mgr" id="mgr" >
+          <option value="">選択してください</option>
+          <option></option>
+        </select>
+      </label>
+    </div>
+    <div class="rightside">
+      <label for="hiredate">
+        <span class="column-name">入社日 </span>
+        <input ngModel name="hiredate" type="date" id="hiredate" maxlength="10" >
+      </label>
+      <label for="sal">
+        <span class="column-name">給料 </span>
+        <input ngModel name="sal" type="number" id="sal" maxlength="7"  placeholder="7桁まで入力できます。">
+      </label>
+      <label for="comm">
+        <span class="column-name">歩合 </span>
+        <input ngModel name="comm" type="number" id="comm" maxlength="7"placeholder="7桁まで入力できます。">
+      </label>
+      <label for="deptno">
+        <span class="column-name">部署 </span>
+        <select ngModel name="deptno" id="deptno" >
+          <option value="" selected>未設定</option>
+          <option> </option>
+        </select>
+      </label>
+    </div>
+<div class="button">
+    <button type="submit" [disabled]="editForm.invalid">
+      <img class="icon-button" src="../../../assets/icon/icon-circleadd.png">
+      追加
+    </button>
+    <button type="button" (click)="updateEmployee(editForm)" [disabled]="editForm.invalid">
+      <img class="icon-button" src="../../../assets/icon/icon-editalt.png">
+      更新
+    </button>
+    <button type="button" (click)="deleteEmployee(editForm)" [disabled]="editForm.invalid">
+      <img class="icon-button" src="../../../assets/icon/icon-circledelete.png">
+      削除
+    </button>
+    <button type="button" (click)="resetForm()">
+      <img class="icon-button" src="../../../assets/icon/icon-cut-scissors.png">
+      クリア
+    </button>
+  </div>
