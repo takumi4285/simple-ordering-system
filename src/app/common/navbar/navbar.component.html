@@ -1,0 +1,31 @@
+<ng-container *ngIf="router.url === '/'">
+    <nav>
+      <ul>
+        <li class="breadcrumb-top">TOP</li>
+      </ul>
+    </nav>
+  </ng-container>
+  <ng-container *ngIf="router.url.includes('/employee')">
+    <nav>
+      <ul>
+        <li class="breadcrumb-top"><a [routerLink]="['/']">TOP</a></li>
+        <li class="breadcrumb"> > 社員表メンテナンス</li>
+      </ul>
+    </nav>
+  </ng-container>
+  <ng-container *ngIf="router.url.includes('/customer')">
+    <nav>
+      <ul>
+        <li class="breadcrumb-top"><a [routerLink]="['/']">TOP</a></li>
+        <li class="breadcrumb"> > 顧客表メンテナンス</li>
+      </ul>
+    </nav>
+  </ng-container>
+  <ng-container *ngIf="router.url.includes('/ordering')">
+    <nav>
+      <ul>
+        <li class="breadcrumb-top"><a [routerLink]="['/']">TOP</a></li>
+        <li class="breadcrumb"> > 注文入力</li>
+      </ul>
+    </nav>
+  </ng-container>
